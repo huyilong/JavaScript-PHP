@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!never forget the html tag after the decalration of doctype>
+<!--
+	using # in php as comments 
+	but in html we need a ! tag to contain the comments
+	coding must use your hands -> get your hands dirty
+-->
+
+<head><title>We actually could omit the head and title</title></head>
+
+<body>
+
+<h1>This is a demo for changing CSS using JS</h1>
+
+<!we using the "id" tag for CSS and JS to select>
+<!--
+	1.id is used for CSS and JavaScript/jQuery (has to be unique in a page)
+	
+	2.name is used for form handling in PHP when a form is submitted via HTML 
+	(has to be unique in a form)
+	
+	3.value will be used in if...else block in php
+-->
+
+<p id="demo">JS could change this line by selecting this and change the CSS</p>
+
+
+<!--
+	this is very interesting and find this fun to always code in CSS 
+	as long as you have the leisure time just coding !
+	php and JS need tons of practice
+	Never stopping coding during the whole semester!!!
+-->
+	
+<script>
+function callme(){
+	var x = document.getElementById("demo");
+	x.style.fontSize = "25px";
+	x.style.color = "red";
+	//comments in javescript is same with java
+	//comments in php is same with python with "#" or "/*"
+	//comments in html using tag with "!--"
+	/*
+	<?php
+    	echo 'This is a test'; // This is a one-line c++ style comment
+    	echo 'This is yet another test';
+    	echo 'One Final Test'; # This is a one-line shell-style comment
+    ?>
+    */    
+}
+</script>
+
+<button type="button" onclick="callme()">Click me to call JS</button>
+</body>
+</html>
