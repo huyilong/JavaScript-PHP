@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+//in jquery all dom event is simplified to used very quickly in jquery
+$(document).ready(function() {
+//this is the outmost function field for jquery
+	$("p").dblclick(function(){
+		//this is the inner function field for specific operation
+		$(this).hide();
+	});
+//we need the simicolon after each function 
+ });
+</script>
+</head>
+
+
+<body>
+
+<p>If you double-click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>

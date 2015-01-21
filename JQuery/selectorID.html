@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+//the outmost function for the page fully loaded
+	$("#selectorID").mousedown(function(){
+		//the inner function for the mousedown event and id selector for single <p>
+		alert("Ooooops! Mouse down over me!!!");
+	});
+
+});
+</script>
+</head>
+<body>
+
+<p id="selectorID"> This is a paragraph. </p>
+</body>
+</html>

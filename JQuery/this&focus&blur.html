@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("input").focus(function(){
+    $(this).css("background-color","#cccccc");
+  });
+  //the event function named focus means that you down the mouse
+  //inside the input field 
+  
+  $("input").blur(function(){
+    $(this).css("background-color","#ffffff");
+    //without ""  we could directly use this
+    //to indicate the current selected html element
+    
+  });
+  //the event function name blur means that you up the mouse
+  //inside the input field
+  
+  
+  //the selector witout "." or "#" will select all the fields of this type
+  //just as "p" the selector "input" will apply to all the input tags within the body
+  
+});
+</script>
+</head>
+<body>
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+
+</body>
+</html>
