@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="upId"></p>
+<p id="downId"></p>
+<p id="second"></p>
+<script>
+var d = new Date();
+document.getElementById("upId").innerHTML = d.toDateString();
+//for string, int and boolean do not use object 
+//which will bog down the loading speed
+//therefore the perfect dealing method boils down to calling constructor for other class
+
+document.getElementById("downId").innerHTML = d;
+document.getElementById("second").innerHTML = d.getTime();
+//	Get the time (milliseconds since January 1, 1970)
+
+//the id must appear in front of the script
+//i.e. when you use it to generate the html it must already be defined upside
+</script>
+
+
+
+</body>
+</html>

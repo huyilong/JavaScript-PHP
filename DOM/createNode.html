@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+
+var para = document.createElement("p");
+//this is a new element node
+var node = document.createTextNode("This is new.");
+//this is a new text node
+para.appendChild(node);
+//bound the text node to the element node
+//but until now there is no effect we just have a new node in air
+
+var element = document.getElementById("div1");
+var child = document.getElementById("p1");
+element.insertBefore(para,child);
+//instead of appending which will make the node be the last child
+//we use insertBefore instead
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This example calls a function which will perform a calculation and returns the result to insert the number into a paragraph which is originally empty</p>
+
+<p id="insert"></p>
+
+<script>
+function calculation(a,b) 
+	{ return a*b; }
+	
+document.getElementById("insert").innerHTML = calculation(3,4);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="intro">My First Page</h1>
+
+<p id="demo">Hello World!</p>
+
+<script>
+
+var myText = document.getElementById("intro").childNodes[0].nodeValue;
+//var myText = document.getElementById("intro").childNodes[0].innerHTML;
+//childNodes[0] is the text node
+//The value of the text node can be accessed by the node's innerHTML property,
+// or the nodeValue.
+document.getElementById("demo").innerHTML = myText;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to sort the array in descending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="insert"></p>
+
+
+<script>
+var arr = [40,100,1,5,25,10];
+
+document.getElementById("insert").innerHTML = arr;
+
+//i.e. we do not need the while loop 
+//the name of the arr will print out the whole thing, just like python
+function myFunction(){
+
+	arr.sort( function(a,b ){return b-a} );
+	//the first element after sorting the array will be the maximum
+	//this is too hard to debug!!!!
+	
+	document.getElementById("insert").innerHTML = arr;
+	//there is an inner function named function(a, b){return a-b}
+	
+	//when you type in inner it is not automatically got innerHTML
+	//this means there is syntax error before it
+	//just like the tag did not turn to dark blue meaning you are wrong
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object</p>
+
+<p id="insert"></p>
+
+<script>
+
+var personObj ={
+	firstName: "Yilong",
+	lastName: "Hu",
+	age: 20,
+	eyeColor:"black"
+};
+//pay attention to use comma between each attribute and use the semicolon in the end
+//of the curly braces for object creation
+
+document.getElementById("insert").innerHTML = 
+//in JavaScript we could break the lines at will to make it more readable
+personObj.firstName + " is " +personObj.age+" years old.";
+</script>
+
+</body>
+</html>

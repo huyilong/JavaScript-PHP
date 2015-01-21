@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="this.innerHTML=Date()">Click Me Get Time!</button>
+<!--this is in a form of <element event="javascript">
+	which is very long to directly put the javascript within the ""
+	sometimes we even need the escape token "\"
+	
+	more common practice is to put the function calling within
+	"" instead of directly putting in the javascript code
+-->
+
+<p>Click the button to display the date.</p>
+<button onclick="dateFunction()">Click Me Calling Date Function!</button>
+
+<script>
+function dateFunction(){
+	document.getElementById("insert").innerHTML = Date();
+}
+</script>
+
+<p id="insert"></p>
+
+</body>
+</html>

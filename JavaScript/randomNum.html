@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Math.floor() combined with Math.random() can return random integers.</p>
+
+<button onclick="generateNum()"> Try it </button>
+
+<p id="insert"></p>
+
+<script>
+//Math does not have a constructor and thus we could directly use this class to call func
+//Math.random() would generate random number from 0 to 1
+//and we could also use Math.floor() to round down the number 
+//and use Math.ceil() to get up the number or just use Math.round()
+
+function generateNum(){
+	document.getElementById("insert").innerHTML = 
+	Math.floor(Math.random()*11);
+	//generate number from 0 to 10
+	
+}
+</script>
+
+</body>
+</html>
