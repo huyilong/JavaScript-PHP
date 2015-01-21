@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+if (Math.random() > 0.5) {
+    text = "<a href='http://w3schools.com'>Visit W3Schools</a>";
+    //we could actually generate some word
+    //or put the tag into the html, which will be put into the outside html
+    //and then be interpreted as file
+} else {
+    text = "<a href='http://wwf.org'>Visit WWF</a>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

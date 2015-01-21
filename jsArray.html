@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="birthday.css" />
+	<title>Birthday Card</title>
+</head>
+
+<body>
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<menu>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</menu>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+
+<button onclick = "myFunction()">Try it</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction(){
+	var index;
+	
+	var text = "<ul>";//here is just a head of the full text
+	var arr = ["hah", "foo", "bar"];//array is a special kind of object
+	//for speeding up, do not use constructor
+	for(i=0;i<arr.length;i++)
+	//js has a dynamic type and we do not need to declare "int"
+	{
+		text + = "<li>" + arr[i] + "</li>";
+	}
+	text + ="</ul>";
+	//text + =typeof(arr);
+	
+	document.getElementById("demo").innerHTML = text;
+}
+//if the color of a tag is not dark blue
+//you left over {} in the code above
+
+//In HTML, there are two types of lists:
+
+	//unordered lists (<ul>) - the list items are marked with bullets	
+	//ordered lists (<ol>) - the list items are marked with numbers or letters
+	
+	//The <li> tag defines a list item.
+
+	//The <li> tag is used in ordered lists(<ol>), unordered lists (<ul>), 
+	//and in menu lists (<menu>).
+</script>
+
+</body>
+</html>

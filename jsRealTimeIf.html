@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get a time-based greeting:</p>
+
+<button onclick="func()">Real Time</button>
+
+<p id="here"></p>
+
+<script>
+function func(){
+	var realtime;
+	var current = new Date().getHours();
+	if(current<10){
+		realtime = "Good morning";
+	}else if(current<20){
+		realtime = "Good day";
+	}else{
+		realtime = "Good evening";
+	}
+	
+	document.getElementById("here").innerHTML = realtime;
+}
+</script>
+
+</body>
+</html>

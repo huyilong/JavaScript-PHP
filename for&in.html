@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+//this is an object
+var nums = [1,2,3,4,5];
+
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+
+var i;
+for(i=0; i<nums.length;i++){
+	txt + = nums[i] +" ";
+}
+
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+</body>
+</html>
