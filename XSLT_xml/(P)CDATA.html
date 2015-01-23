@@ -1,0 +1,70 @@
+All text in an XML document will be parsed by the parser.
+
+i.e. after the browser sends a xml http request 
+the server will send back a xml file stored in it
+and then the browser will use browser xml parser to convert the xml into xml DOM
+which could be used by JavaScript
+
+***  PCDATA - Parsed Character Data
+
+XML parsers normally parse all the text in an XML document.
+
+When an XML element is parsed, the text between the XML tags is also parsed:
+
+<message>This text is also parsed</message>
+The parser does this because XML elements can contain other elements, as in this example, where the <name> element contains two other elements (first and last):
+
+<name><first>Bill</first><last>Gates</last></name>
+and the parser will break it up into sub-elements like this:
+
+<name>
+  <first>Bill</first>
+  <last>Gates</last>
+</name>
+
+Parsed Character Data (PCDATA) is a term used about 
+text data that will be parsed by the XML parser.
+
+
+
+***  CDATA - (Unparsed) Character Data
+
+But text inside a CDATA section will be ignored by the parser.
+
+The term CDATA is used about text data that should not be parsed by the XML parser.
+
+Characters like "<" and "&" are illegal in XML elements.
+
+"<" will generate an error because the parser interprets it as the start of a new element.
+
+"&" will generate an error because the parser interprets it as the start of an character entity.
+
+Some text, like JavaScript code, contains a lot of "<" or "&" characters. To avoid errors script code can be defined as CDATA.
+
+Everything inside a CDATA section is ignored by the parser.
+
+A CDATA section starts with "<![CDATA[" and ends with "]]>":
+
+<script>
+<![CDATA[
+function matchwo(a,b)
+{
+if (a < b && a < 0) then
+  {
+  return 1;
+  }
+else
+  {
+  return 0;
+  }
+}
+]]>
+</script>
+
+In the example above, everything inside the CDATA section is ignored by the parser.
+
+Notes on CDATA sections:
+
+A CDATA section cannot contain the string "]]>". Nested CDATA sections are not allowed.
+
+The "]]>" that marks the end of the CDATA section cannot contain spaces or line breaks.

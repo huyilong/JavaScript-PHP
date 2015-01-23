@@ -1,0 +1,74 @@
+AngularJS lets you extend HTML with new attributes called Directives.
+
+***AngularJS Expressions
+
+AngularJS expressions are written inside double braces: {{ expression }}.
+
+AngularJS expressions binds data to HTML the same way as the ng-bind directive.
+
+
+
+*** AngularJS Directives
+
+AngularJS directives are extended HTML attributes with the prefix ng-.
+
+The ng-app directive initializes an AngularJS application.
+
+The ng-init directive initialize application data.
+
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+
+Using ng-init is not very common. You will learn how to initialize data in the chapter about controllers.
+
+****
+
+1. The ng-app Directive
+The ng-app directive defines the root element of an AngularJS application.
+
+The ng-app directive will auto-bootstrap (automatically initialize) the application when a web page is loaded.
+
+Later you will learn how ng-app can have a value (like ng-app="myModule"), to connect code modules.
+
+2. The ng-init Directive
+The ng-init directive defines initial values for an AngularJS application.
+
+Normally, you will not use ng-init. You will use a controller or module instead.
+
+You will learn more about controllers and modules later.
+
+3. The ng-model Directive
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+
+4. The ng-model directive can also:
+
+Provide type validation for application data (number, email, required).
+Provide status for application data (invalid, dirty, touched, error).
+Provide CSS classes for HTML elements.
+Bind HTML elements to HTML forms.
+The ng-repeat Directive
+The ng-repeat directive clones HTML elements once for each item in a collection (in an array).
+
+
+
+
+
+
+Data Binding
+The {{ firstName }} expression, in the example above, is an AngularJS data binding expression.
+
+Data binding in AngularJS, synchronizes AngularJS expressions with AngularJS data.
+
+{{ firstName }} is synchronized with ng-model="firstName".
+
+In the next example two text fields are synchronized with two ng-model directives:
+
+AngularJS Example
+
+<div ng-app="" ng-init="quantity=1;price=5">
+
+Quantity: <input type="number"	ng-model="quantity">
+Costs:    <input type="number" ng-model="price">
+
+Total in dollar: {{ quantity * price }}
+
+</div>
