@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<script>
+//DOM document object model is tree-structured 
+//both HTML & XML would be used and manipulated with tags,root,children by DOM
+//in xml the xml file would be conversed to xml DOM by the server response to browser
+//in html the DOM could directly operated by javascript
+//all in all, all DOM must be inside <script> using js
+//however, xml could also use XSLT instead
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+xmlhttp.open("GET","cd_catalog.xml",false);
+xmlhttp.send();
+
+//XMLHttpRequest is sent to the server
+
+xmlDoc=xmlhttp.responseXML; 
+//the XML file is returned to the browser
+
+//then the browser parser will transform the XML into XML DOM
+//which we could manipulate it as HTML DOM : tree-structured get by TAG
+
+document.write("<table><tr><th>Artist</th><th>Title</th></tr>");
+//HERE using document.write 
+//this would directly output the following contents as html into the browser
+
+var x=xmlDoc.getElementsByTagName("CD");
+for (i=0;i<x.length;i++)
+  { 
+  document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+  }
+document.write("</table>");
+</script>
+
+</body>
+</html>

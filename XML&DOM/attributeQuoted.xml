@@ -1,0 +1,24 @@
+<note date="12/11/2007">
+  <to>Tove</to>
+  <from>Jani</from>
+</note>
+<!--
+
+	XML documents must contain one element that is the parent of all other elements. This 			element is called the root element.
+
+	<root>
+	  <child>
+	    <subchild>.....</subchild>
+	  </child>
+	</root>
+	
+	
+	Comments in XML
+	The syntax for writing comments in XML is similar to that of HTML.
+
+	BUT ->
+	
+	HTML truncates multiple white-space characters to one single white-space:
+	With XML, the white-space in a document is not truncated.
+
+-->

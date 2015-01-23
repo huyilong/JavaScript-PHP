@@ -1,0 +1,18 @@
+html / xml DOM :Document Object Model
+
+defines a standard way for accessing and manipulating documents.
+
+
+All elements can be accessed through the DOM tree. Their content (text and attributes) can be modified or deleted, and new elements can be created. The elements, their text, and their attributes are all known as nodes.
+
+BE SELECTED WITH root/child/tag ...
+
+
+
+Important Note!
+To extract the text "Tove" from the <to> element in the XML file above ("note.xml"), the syntax is:
+
+getElementsByTagName("to")[0].childNodes[0].nodeValue
+
+
+Notice that even if the XML file contains only ONE <to> element you still have to specify the array index [0]. This is because the getElementsByTagName() method returns an array.

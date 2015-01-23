@@ -1,0 +1,44 @@
+Displaying your XML Files with CSS?
+It is possible to use CSS to format an XML document.
+
+Below is an example of how to use a CSS style sheet to format an XML document:
+
+Take a look at this XML file: The CD catalog
+
+Then look at this style sheet: The CSS file
+
+Finally, view: The CD catalog formatted with the CSS file
+
+Below is a fraction of the XML file. The second line links the XML file to the CSS file:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="cd_catalog.css"?>
+
+here we link this xml file with the external CSS stylesheet so that it could be displayed
+
+<CATALOG>
+  <CD>
+    <TITLE>Empire Burlesque</TITLE>
+    <ARTIST>Bob Dylan</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>Columbia</COMPANY>
+    <PRICE>10.90</PRICE>
+    <YEAR>1985</YEAR>
+  </CD>
+  <CD>
+    <TITLE>Hide your heart</TITLE>
+    <ARTIST>Bonnie Tyler</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>CBS Records</COMPANY>
+    <PRICE>9.90</PRICE>
+    <YEAR>1988</YEAR>
+  </CD>
+.
+.
+.
+</CATALOG>
+
+Formatting XML with CSS is not the most common method.
+
+W3C recommends using XSLT instead.
+

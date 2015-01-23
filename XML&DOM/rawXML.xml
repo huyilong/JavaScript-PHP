@@ -1,0 +1,13 @@
+Why Does XML Display Like This?
+XML documents do not carry information about how to display the data.
+
+Since XML tags are "invented" by the author of the XML document, browsers do not know if a tag like <table> describes an HTML table or a dining table.
+
+Without any information about how to display the data, most browsers will just display the XML document as it is.
+
+In the next chapters, we will look at different solutions for the display problem, using CSS, XSLT, and JavaScript.
+
+
+
+WE CAN USE CSS & XSTL & JAVASCRIPT to solve this problem, which is caused by xml itself not carrying any information about how to display the data
+

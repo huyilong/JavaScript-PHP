@@ -1,0 +1,36 @@
+<!--
+
+Unicode is an industry standard for character encoding of text documents. It deﬁnes (nearly) every possible international character by a name and a number.
+
+Unicode has two variants: UTF-8 and UTF-16.
+
+UTF = Universal character set Transformation Format.
+
+UTF-8 uses 1 byte (8-bits) to represent basic Latin characters, and two, three, or four bytes for the rest.
+
+UTF-16 uses 2 bytes (16 bits) for most characters, and four bytes for the rest.
+
+
+UTF-8 - The Web Standard
+UTF-8 is the standard character encoding on the web.
+
+UTF-8 is the default character encoding for HTML5, CSS, JavaScript, PHP, SQL, and XML.
+
+
+XML Encoding
+The ﬁrst line in an XML document is called the prolog:
+
+<?xml version="1.0"?>
+The prolog is optional. Normally it contains the XML version number.
+
+It can also contain information about the encoding used in the document. This prolog specifies UTF-8 encoding:
+
+<?xml version="1.0" encoding="UTF-8"?>
+//describe the encoding as an attribute inside the first tag for 
+//declaring XML coding block
+
+The XML standard states that all XML software must understand both UTF-8 and UTF-16.
+
+UTF-8 is the default for documents without encoding information.
+
+-->

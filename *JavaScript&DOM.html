@@ -1,0 +1,21 @@
+DOM for html is already built? we could use JS to manipulate it directly
+
+DOM for XML is following:
+the browser sends a XMLHttpRequest to the server
+the server has all the XML files and will send back the required XML file
+the browser parser will transform the XML file into XML DOM
+
+Then again the XML DOM could be manipulated by JS
+
+JS could use getElementsByTagName and document.getElementById("showCD").innerHTML=txt;
+
+TO display this things (XML has XSLT to convert XML into HTML, too)
+
+function displayCD()
+{
+	artist=(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+	title=(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+	year=(x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue);
+	txt="Artist: " + artist + "<br>Title: " + title + "<br>Year: "+ year;
+	document.getElementById("showCD").innerHTML=txt;
+}

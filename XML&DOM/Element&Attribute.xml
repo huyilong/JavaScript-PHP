@@ -1,0 +1,49 @@
+XML Elements vs. Attributes
+
+in html the attribute is not a part of data:
+In HTML, attributes provide additional information about elements:
+
+<img src="computer.gif">
+<a href="demo.asp">
+
+attributes often provide information that is not a part of the data. In the example below, the file type is irrelevant to the data, but can be important to the software that wants to manipulate the element:
+
+<file type="gif">computer.gif</file>
+
+
+but in xml the attribute does not have essential difference with
+
+Take a look at these examples:
+
+<person sex="female">
+  <firstname>Anna</firstname>
+  <lastname>Smith</lastname>
+</person>
+
+<person>
+  <sex>female</sex>
+  <firstname>Anna</firstname>
+  <lastname>Smith</lastname>
+</person>
+
+In the first example sex is an attribute. In the last, sex is an element. Both examples provide the same information.
+
+There are no rules about when to use attributes or when to use elements. Attributes are handy in HTML. In XML my advice is to avoid them. Use elements instead.
+
+
+
+Well-formed XML must be most expanded:
+
+An expanded date element is used in the third: (THIS IS MY FAVORITE):
+
+<note>
+  <date>
+    <day>10</day>
+    <month>01</month>
+    <year>2008</year>
+  </date>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
