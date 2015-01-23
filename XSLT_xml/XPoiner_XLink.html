@@ -1,0 +1,28 @@
+Note that the XML document above uses id attributes on each element!
+
+So, instead of linking to the entire document (as with XLink), XPointer allows you to link to specific parts of the document. 
+To link to a specific part of a page, add a number sign (#) and an XPointer expression after the URL in the xlink:href attribute, like this: xlink:href="http://dog.com/dogbreeds.xml#xpointer(id('Rottweiler'))". The expression refers to the element in the target document, with the id value of "Rottweiler".
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mydogs xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<mydog>
+  <description>
+  Anton is my favorite dog. He has won a lot of.....
+  </description>
+  <fact xlink:type="simple" xlink:href="http://dog.com/dogbreeds.xml#Rottweiler">
+  Fact about Rottweiler 
+  </fact>
+</mydog>
+
+<mydog>
+  <description>
+  Pluto is the sweetest dog on earth......
+  </description>
+  <fact xlink:type="simple" xlink:href="http://dog.com/dogbreeds.xml#FCRetriever">
+  Fact about flat-coated Retriever 
+  </fact>
+</mydog>
+
+</mydogs>

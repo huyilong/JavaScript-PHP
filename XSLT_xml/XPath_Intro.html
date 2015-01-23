@@ -1,0 +1,35 @@
+XPath Path Expressions
+XPath uses path expressions to select nodes or node-sets in an XML document. These path expressions look very much like the expressions you see when you work with a traditional computer file system.
+
+XPath Standard Functions
+XPath includes over 100 built-in functions. There are functions for string values, numeric values, date and time comparison, node and QName manipulation, sequence manipulation, Boolean values, and more.
+
+XPath is Used in XSLT
+XPath is a major element in the XSLT standard. Without XPath knowledge you will not be able to create XSLT documents.
+
+You can read more about XSLT in our XSLT tutorial.
+
+XQuery and XPointer are both built on XPath expressions. XQuery 1.0 and XPath 2.0 share the same data model and support the same functions and operators.
+
+
+***  Selecting Nodes
+XPath uses path expressions to select nodes in an XML document. The node is selected by following a path or steps. The most useful path expressions are listed below:
+
+Expression	Description
+nodename	Selects all nodes with the name "nodename"
+/	Selects from the root node
+//	Selects nodes in the document from the current node that match the selection no matter where they are
+.	Selects the current node
+..	Selects the parent of the current node
+@	Selects attributes
+
+
+***  Selecting Several Paths
+By using the | operator in an XPath expression you can select several paths.
+
+In the table below we have listed some path expressions and the result of the expressions:
+
+Path Expression	Result
+//book/title | //book/price	Selects all the title AND price elements of all book elements
+//title | //price	Selects all the title AND price elements in the document
+/bookstore/book/title | //price	Selects all the title elements of the book element of the bookstore element AND all the price elements in the document

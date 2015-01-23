@@ -1,0 +1,47 @@
+XSL stands for EXtensible Stylesheet Language, and is a style sheet language for XML documents.
+
+(XML is just describe data 
+XSL is EXtensible Stylesheet Language to define style sheet for XML documents
+
+XSLT is using XPath to select different element nodes in XML and transfer is into XHTML
+)
+
+XSLT stands for XSL Transformations. In this tutorial you will learn how to use XSLT to transform XML documents into other formats, like XHTML. 
+
+(XHTML is similar to HTML, but it is much more strict compared with HTML
+like: it requires !DOCTYPE and attribute not be capitalized and must tag paired)
+
+
+XSLT Elements
+Description of all the XSLT elements from the W3C Recommendation, and information about browser support.
+
+XSLT Functions
+XSLT includes over 100 built-in functions. There are functions for string values, numeric values, date and time comparison, node and QName manipulation, sequence manipulation, Boolean values, and more.
+
+XQuery 1.0, XPath 2.0, and XSLT 2.0 share the same functions library.
+<?xml version="1.0"?>
+
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+  <body>
+    <h2>My CD Collection</h2>
+    <table border="1">
+      <tr bgcolor="#9acd32">
+        <th>Title</th>
+        <th>Artist</th>
+      </tr>
+      <xsl:for-each select="catalog/cd">
+        <tr>
+          <td><xsl:value-of select="title"/></td>
+          <td><xsl:value-of select="artist"/></td>
+        </tr>
+      </xsl:for-each>
+    </table>
+  </body>
+  </html>
+</xsl:template>
+
+</xsl:stylesheet>
